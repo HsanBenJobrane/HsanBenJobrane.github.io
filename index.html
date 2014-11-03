@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
     <head>
         <title>Hsan, Smart Hacker</title>
         <link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -16,37 +16,32 @@
             display: table;
         }
 
-        .my-block {
+        .hithere {
             text-align: center;
             display: table-cell;
             vertical-align: middle;
+            visibility: hidden;
         }
 
-        .loading {
+        h1 {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: 300;
+            font-size: 5em;
         }
+
         </style>
     </head>
     <body>
-    <div class="loading">
-        <img src="images/gif-load.gif">
-    </div>
-    <div class="my-block">
-       Hi, there!
+    <div class="hithere">
+       <h1>Hi, there!</h1>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
         $("document").ready(function () {
-
-            console.log("OK we are ready");
-
-            $(".loading").fadeIn(1000, function () {
-                $(".loading").fadeOut(1000, function () {
-                    $(".my-block").fadeIn(500, function () {
-                        console.log("done");
-                    });
-                });
-            });
-
+            setTimeout(function () {
+                $(".hithere").css({ visibility: 'visible' });
+                $('.hithere').addClass('animated fadeInDown');
+            }, 500);
         });
     </script>
     </body>
