@@ -20,6 +20,7 @@
             text-align: center;
             display: table-cell;
             vertical-align: middle;
+            visibility: hidden;
         }
 
         h1 {
@@ -38,6 +39,7 @@
     <script type="text/javascript">
         $("document").ready(function () {
             setTimeout(function () {
+                $(".hithere").css({"visibility": "visible"});
                 $(".hithere").addClass("animated bounceInDown");
             }, 1000);
         });
