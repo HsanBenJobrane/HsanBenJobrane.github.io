@@ -16,18 +16,10 @@
             display: table;
         }
 
-        .middle {
+        .hithere {
             text-align: center;
             display: table-cell;
             vertical-align: middle;
-        }
-
-        .hi {
-            visibility: hidden;
-        }
-
-        .there {
-            visibility: hidden;
         }
 
         h1 {
@@ -39,21 +31,14 @@
         </style>
     </head>
     <body>
-    <div class="middle">
-       <h1><span class="hi">Hi, </span>
-       <span class="there">there!</span></h1>
+    <div class="hithere">
+       <h1>Hi, there!</h1>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
         $("document").ready(function () {
             setTimeout(function () {
-                $(".hi").css({ visibility: 'visible' });
-                $('.hi').addClass('animated bounceInUp');
-            }, 500);
-
-            setTimeout(function () {
-                $(".hi").css({ visibility: 'visible' });
-                $('.hi').addClass('animated bounceInUp');
+                $(".hithere").addClass("animated bounceInDown");
             }, 1000);
         });
     </script>
